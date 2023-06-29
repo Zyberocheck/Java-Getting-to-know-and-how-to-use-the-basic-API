@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class DZ1 {
     public static void main(String[] args){
-        // sumMultNumbers();
+        sumMultNumbers();
         // findingPrimeNumber();
         // kalkulator();
 
@@ -23,6 +23,7 @@ public class DZ1 {
         
         int size = ns.nextInt();
         int[] arrayn = new int[size] ;
+        System.out.println(Arrays.toString(arrayn));
         int sum = 0;
         BigInteger mult = BigInteger.ONE;
         int in = 1;
