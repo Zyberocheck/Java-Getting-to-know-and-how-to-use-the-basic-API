@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Random;
 
 public class DZ_3 {
@@ -8,23 +10,24 @@ public class DZ_3 {
     }
     static void randomNumbers(int size, int maxValue){
         ArrayList<Integer> nums = new ArrayList<>(size);
+        ArrayList<Integer> numsa = new ArrayList<>(size);
+
         Random rand = new Random();
         
         for (int i = 0; i < size; i++)
             nums.add(rand.nextInt(maxValue));
 
-        for (Integer num : nums) 
+        for (Integer num : nums)
             System.out.print(num + " ");
         System.out.println();
 
-        nums.sort(null);
-
-        // for (Integer num : nums)
-        for (int i = 0; i < nums.size(); i++) {
-            if(i % 2 != 0)
-            System.out.print(i + " ");
+        for (Integer num : nums)
+            if(num % 2!=0)
+            numsa.add(num);
+            System.out.print(numsa + "- массив без четных чисел");
         System.out.println();
-        }    
-        
+    
     }
+        
 }
+
