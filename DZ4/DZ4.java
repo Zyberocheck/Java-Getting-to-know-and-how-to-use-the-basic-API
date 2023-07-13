@@ -24,14 +24,14 @@ public class DZ4 {
     static LinkedList<Integer> sum(Deque<Integer> a, Deque<Integer> b) {
         int sum = 0;
         int signX = a.getLast() / Math.abs(a.getLast());
-        
+
         int signY = b.getLast() / Math.abs(b.getLast());
-        
+
         if (a.size() >= b.size()) {
             for (int i = 0; i <= a.size() - b.size(); i++) {
                 b.addLast(0);
             }
-            
+
         } else {
             for (int i = 0; i <= b.size() - a.size(); i++) {
                 a.addLast(0);
@@ -41,13 +41,12 @@ public class DZ4 {
         int i = 0;
         while (!a.isEmpty()) {
             int x = a.pollFirst() * (int) Math.pow(10, i);
-            
+
             int y = b.pollFirst() * (int) Math.pow(10, i);
-            
+
             sum += (Math.abs(x) * signX) + (Math.abs(y) * signY);
             i++;
-            
-            
+
         }
 
         return linkedRes(sum);
